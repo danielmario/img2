@@ -33,7 +33,6 @@ int convert(const char *input)
 int main(int argc, const char *argv[])
 {
 	int error = 0;
-	ilInit();
 	if (argc == 1) {
 		fprintf(stderr,
 				"Converts input images to other formats using ImageLibrary.\n"
@@ -43,6 +42,7 @@ int main(int argc, const char *argv[])
 		return 1;
 	}
 	ext = argv[1];
+	ilInit();
 	if (argc > 2) {
 		int i;
 		for (i=2; i<argc; i++) {
